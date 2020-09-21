@@ -1,2 +1,9 @@
 @import "variable_override";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body{
+    max-width: 100%;
+}
+.row{
+    max-width: 100%;
+}

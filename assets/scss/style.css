@@ -62,6 +62,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  max-width: 100%;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -586,6 +587,7 @@ pre code {
       flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  max-width: 100%;
 }
 
 .no-gutters {
