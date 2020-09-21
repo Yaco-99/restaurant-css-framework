@@ -1,2 +1,15 @@
 @import "variable_override";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "restaurants";
+@import "accueil";
+@import "variable_override";
+
+.row{
+    max-width: 100%;
+}
+body{
+    background-color: hsl(0, 0%, 7%);
+    max-width: 100%;
+    color: rgba($color: #ffffff, $alpha: 0.87);
+}
+
