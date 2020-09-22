@@ -9,8 +9,8 @@
 </head>
 <body>
  
-    <header id="keller">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light">
                    <a class="navbar-brand" href="#">LE KELLER</a>
                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon"></span>
@@ -20,8 +20,8 @@
                        <li class="nav-item">
                          <a class="nav-link" href="index.html">Accueil</a>
                        </li>
-                       <li class="nav-item">
-                           <a class="nav-link active" href="carte.html">Carte</a>
+                       <li class="nav-item active">
+                           <a class="nav-link" href="carte.html">Carte</a>
                          </li>
                          <li class="nav-item">
                            <a class="nav-link" href="photos.html">Photos</a>
@@ -37,8 +37,8 @@
                  </nav>
        </header>
 
-       <main class="ml-2">
-           <ul>
+       <main class="ml-2 text-center my-5">
+           <ul class="list-unstyled">
                 <li><a href="#categorie_Meilleures_ventes">Meilleures ventes</a></li>
                 <li><a href="#categorie_Sushi_box_midi">Sushi box midi</a></li>
                 <li><a href="#categorie_Sushi_box_soir">Sushi box soir</a></li>
@@ -369,16 +369,10 @@
            </article>
         
        </main>
-
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="assets/node_modules/jquery/dist/jquery.slim.js"></script>
-    <script src="assets/node_modules/@popperjs/core/dist/umd/popper.js"></script>
-    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
-    <footer class="bg-dark text-light">
-        <div class="container-fluid justify-content-between p-3">
-            <div class="row justify-content-around">
-                <div class="col-md-3">
+    <footer class="bg-dark border-top border-light">
+        <div class="container-fluid p-3">
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-2 offset-1">
                     <h6>Yannick :</h6>
                     <ul class="list-unstyled">
                         <li><a href="https://www.linkedin.com/in/yannick-coopman-8022b0159/" target="_blank">Linkedin</a></li>
@@ -387,7 +381,7 @@
                         <li><a href="tel:0471577539" target="_blank">0471 57 75 39</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <h6>Antoine :</h6>
                     <ul class="list-unstyled">
                         <li><a href="" target="_blank">Linkedin</a></li>
@@ -396,16 +390,16 @@
                         <li><a href="tel:" target="_blank"></a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <h6>Gaetano :</h6>
                     <ul class="list-unstyled">
-                        <li><a href="https://www.linkedin.com/in/gaetano-di-salvo-a295081b5/" target="_blank">Linkedin</a></li>
-                        <li><a href="https://github.com/gaetano-github" target="_blank">GitHub</a></li>
+                        <li><a href="" target="_blank">Linkedin</a></li>
+                        <li><a href="" target="_blank">GitHub</a></li>
                         <li><a href="mailto:" target="_blank"></a></li>
-                        <li><a href="tel:" target="_blank"></a></li>
+                        <li><a href="tel:0471577539" target="_blank"></a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <h6>Nathanaël :</h6>
                     <ul class="list-unstyled">
                         <li><a href="" target="_blank">Linkedin</a></li>
@@ -418,5 +412,10 @@
         </div>
     </footer>
     
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="assets/node_modules/jquery/dist/jquery.slim.js"></script>
+    <script src="assets/node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
 </body>
 </html>
