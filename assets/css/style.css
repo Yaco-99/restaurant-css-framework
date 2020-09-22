@@ -1,3 +1,4 @@
+/*$pagination-disabled-color: rgba, 0,05;*/
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -5382,15 +5383,15 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: black;
-  border-color: black;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .page-item.disabled .page-link {
   color: #6c757d;
   pointer-events: none;
   cursor: auto;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
   border-color: #dee2e6;
 }
 
@@ -10797,6 +10798,17 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+body {
+  background-color: #121212;
+  max-width: 100%;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.page-link {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
 }
 
 body {
