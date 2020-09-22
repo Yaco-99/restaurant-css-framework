@@ -10842,6 +10842,10 @@ body {
   height: 95%;
 }
 
+.index-first-section {
+  min-height: 70vh;
+}
+
 .subscribeModal {
   color: #3b4363;
   top: 50%;
@@ -10930,5 +10934,9 @@ body {
 
 .menu-nav {
   max-height: 70vh;
+}
+
+.contact-first-section {
+  min-height: 70vh;
 }
 /*# sourceMappingURL=style.css.map */
