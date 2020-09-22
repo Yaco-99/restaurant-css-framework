@@ -9,7 +9,7 @@
 </head>
 <body>
  
-    <header>
+    <header class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light">
                    <a class="navbar-brand" href="#">LE KELLER</a>
                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,36 +35,36 @@
                      </ul>
                    </div>
                  </nav>
+                 <div class="row">
+                    <div class="col-1">
+                     <ul class="nav flex-column nav-pills">
+                             <li class="nav-item dropright"> 
+                                 <a class="nav-link dropdown-toggle active w-100" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Nos menu</a>
+                                 <div class="dropdown-menu">
+                                     <a class="dropdown-item" href="#categorie_Meilleures_ventes">Meilleures ventes</a>
+                                     <a class="dropdown-item" href="#categorie_Sushi_box_midi">Sushi box midi</a>
+                                     <a class="dropdown-item" href="#categorie_Sushi_box_soir">Sushi box soir</a>
+                                     <a class="dropdown-item" href="#categorie_Box">Box</a>
+                                     <a class="dropdown-item" href="#categorie_Chirashi_&_poke_(midi)">Chirashi & poke (midi)</a>
+                                     <a class="dropdown-item" href="#categorie_Chirashi_&_poke_(soir)">Chirashi & poke (soir)</a>
+                                     <a class="dropdown-item" href="#categorie_Sashimi_(midi)">Sashimi (midi)</a>
+                                     <a class="dropdown-item" href="#categorie_Sashimi_(soir)">Sashimi (soir)</a>
+                                     <a class="dropdown-item" href="#categorie_À_la_carte">À la carte</a>
+                                     <a class="dropdown-item" href="#categorie_Accompagnements">Accompagnements</a>
+                                     <a class="dropdown-item" href="#categorie_Desserts">Desserts</a>
+                                     <a class="dropdown-item" href="#categorie_Boissons">Boissons</a>
+                                     <a class="dropdown-item" href="#categorie_Bières">Bières</a>
+                                     <a class="dropdown-item" href="#categorie_Saké">Saké</a>
+                                 </div>
+                             </li>
+                     </ul>
+                     </div>
+                 </div>
        </header>
 
-       <main class="ml-2 text-center my-5">
-           
-           <ul class="nav flex-column nav-pills">
-                <li class="nav-item dropdown"> 
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Nos menu</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#categorie_Meilleures_ventes">Meilleures ventes</a>
-                        <a class="dropdown-item" href="#categorie_Sushi_box_midi">Sushi box midi</a>
-                        <a class="dropdown-item" href="#categorie_Sushi_box_soir">Sushi box soir</a>
-                        <a class="dropdown-item" href="#categorie_Box">Box</a>
-                        <a class="dropdown-item" href="#categorie_Chirashi_&_poke_(midi)">Chirashi & poke (midi)</a>
-                        <a class="dropdown-item" href="#categorie_Chirashi_&_poke_(soir)">Chirashi & poke (soir)</a>
-                        <a class="dropdown-item" href="#categorie_Sashimi_(midi)">Sashimi (midi)</a>
-                        <a class="dropdown-item" href="#categorie_Sashimi_(soir)">Sashimi (soir)</a>
-                        <a class="dropdown-item" href="#categorie_À_la_carte">À la carte</a>
-                        <a class="dropdown-item" href="#categorie_Accompagnements">Accompagnements</a>
-                        <a class="dropdown-item" href="#categorie_Desserts">Desserts</a>
-                        <a class="dropdown-item" href="#categorie_Boissons">Boissons</a>
-                        <a class="dropdown-item" href="#categorie_Bières">Bières</a>
-                        <a class="dropdown-item" href="#categorie_Saké">Saké</a>
-                    </div>
-                </li>
-               
-           </ul>
-
+           <main class="ml-2 text-center py-5">
            <article class="my-5" id="categorie_Meilleures_ventes">
-             <h3 class="border border-dark d-inline-block my-3">Meilleures ventes</h3>    
-
+             <h3 class="border border-dark d-inline-block mt-5 mb-3">Meilleures ventes</h3>    
                 <div class="ml-4">
                     <p><u>Super salmon</u></p>
                     <p>6 california saumon avocat.<br> 6 spring saumon avocat.<br> 6 maki salmon roll.
@@ -398,7 +398,7 @@
     
     <!-- JS, Popper.js, and jQuery -->
     <script src="assets/node_modules/jquery/dist/jquery.slim.js"></script>
-    <script src="assets/node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="assets/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
 </body>
