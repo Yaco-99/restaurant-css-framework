@@ -1,3 +1,35 @@
+const openModalButton = document.getElementById("open-modal-button");
+const closeModalButtons = document.querySelectorAll("[data-close-button]");
+const overlay = document.getElementById("overlay");
+
+openModalButton.addEventListener("click", () => {
+    openModal(modal);
+  });
+  
+  overlay.addEventListener("click", () => {
+    const modal = document.querySelector(".subscribeModal.active");
+    closeModal(modal);
+  });
+  
+  closeModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = button.closest(".subscribeModal");
+      closeModal(modal);
+    });
+  });
+
+  function openModal(modal) {
+    if (modal == null) return;
+    console.log("open");
+    modal.classList.add("active");
+    overlay.classList.add("active");
+  }
+  function closeModal(modal) {
+    if (modal == null) return;
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+
 function restaurantChoice(){
     let restaurant = document.getElementById("restaurant-list").value;
     let adress = document.getElementById("adress");

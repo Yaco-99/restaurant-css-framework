@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Keller</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/myscript.js"></script>
 </head>
 <body>
 <header>
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light">
-            <a class="navbar-brand" href="#">BRAND</a>
+            <a class="navbar-brand" href="#">LE KELLER</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -53,14 +54,14 @@
             <ol class="p-0 d-flex flex-column justify-content-between event-list">
             <li class="border-bottom">
             <h5>Venez participer à notre fête d'ouverture le 01 octobre !</h5>
-            <p>Pour fêter notre ouvertre, nous organisous une fête buffet et boisson à volonté !</p>
+            <p>Pour fêter notre ouvertre, nous organisons une fête buffet et boisson à volonté !</p>
             <ul>
                 <li>25€ l'entrée</li>
                 <li>Carte de sushi uniquement</li>
                 <li>Boisson soft et alcool à volonté (à consommer avec modération)</li>
                 <li>Inscription limité dépèchez-vous !</li>
             </ul>
-            <button class="btn btn-primary ml-auto d-block my-3" type="button">Inscrivez-vous !</button>
+            <button class="btn btn-primary ml-auto d-block my-3" type="button" id="open-modal-button">Inscrivez-vous !</button>
         </li>
         <li class="border-bottom"><h5>À venir : Noël</h5></li>
         <li><h5>À venir : Nouvel An</h5></li>
@@ -78,10 +79,36 @@
         </div>
     </div>
 </section>
-<footer class="bg-dark border-top border-light">
-    <div class="container-fluid justify-content-between p-3">
-        <div class="row justify-content-around">
-            <div class="col-md-3">
+<div class="subscribeModal col col-md-6" id="modal">
+    <div class="subscribeModal-content w-100">
+      <div class="subscribeModal-header">
+        <h2>Inscription</h2>
+        <button class="justify-content-end" data-close-button type="button" id="close-modal-button">X</button>
+      </div>
+        <form id="myform" method="post">
+            <div class="row m-0">
+            <div class="col-12 col-lg-6 form-group pl-0">
+              <label for="firstname">Nom</label>
+                <input required type="text" class="form-control" id="firstname" name="firstname">
+            </div>
+            <div class="col-12 col-lg-6 form-group pr-0">
+              <label for="lastname">prénom</label>
+              <input required type="text" class="form-control" name="lastname" id="lastname">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Mail</label>
+            <input required type="email" class="form-control formEmail" name="email" id="email" placeholder="exemple@gmail.com">
+          </div>
+            <button type="submit" class="btn btn-primary" data-close-button data-add-target="#propositionListe">Submit</button>
+          </form>
+    </div>
+  </div>
+  <div id="overlay"></div>
+  <footer class="bg-dark border-top border-light">
+    <div class="container-fluid p-3">
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-2 offset-1">
                 <h6>Yannick :</h6>
                 <ul class="list-unstyled">
                     <li><a href="https://www.linkedin.com/in/yannick-coopman-8022b0159/" target="_blank">Linkedin</a></li>
@@ -90,7 +117,7 @@
                     <li><a href="tel:0471577539" target="_blank">0471 57 75 39</a></li>
                 </ul>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <h6>Antoine :</h6>
                 <ul class="list-unstyled">
                     <li><a href="" target="_blank">Linkedin</a></li>
@@ -99,7 +126,7 @@
                     <li><a href="tel:" target="_blank"></a></li>
                 </ul>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <h6>Gaetano :</h6>
                 <ul class="list-unstyled">
                     <li><a href="" target="_blank">Linkedin</a></li>
@@ -108,7 +135,7 @@
                     <li><a href="tel:0471577539" target="_blank"></a></li>
                 </ul>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <h6>Nathanaël :</h6>
                 <ul class="list-unstyled">
                     <li><a href="" target="_blank">Linkedin</a></li>
