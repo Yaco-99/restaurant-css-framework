@@ -1,0 +1,19 @@
+
+
+.container{
+    background-color: rgb(219, 219, 219));
+    border-radius: 3px;
+    border: 1px solid #0000;
+}
+
+form{
+    align-items: center;
+}
+h1{
+    text-align: center;
+}
+
+form{
+    min-height: 100vh;
+    
+}
