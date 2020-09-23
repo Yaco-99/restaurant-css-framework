@@ -40,20 +40,19 @@
     <div class="d-flex mb-3">
         <h5 class="mx-3">Où souhaitez-vous nous rejoindre ?</h5>
         <select name="restaurant" id="restaurant-list" onchange="restaurantChoice()">
-            <option value="0">Nos restaurants</option>
-            <option value="1">Charleroi</option>
-            <option value="2">Bruxelles</option>
+            <option value="0">Charleroi</option>
+            <option value="1">Bruxelles</option>
         </select>
     </div>
     <div class="row my-5 mx-0">
         <div class="container col-12 col-lg-2 mr-lg-3 border border-light ml-1">
             <h6 class="pt-3">Adresse :</h6>
-            <p id="adress"></p>
+            <p id="adress">KELLER - Square des Martyrs 1, 6000 Charleroi</p>
         </div>
-        <div class="restaurant-map container col-12 col-lg-6 border border-light mx-lg-5 my-lg-0 my-4">
+        <div class="restaurant-map container col-12 col-lg-6 border border-light mx-lg-5 my-lg-0 my-4 p-0">
            <h6 class="mapTitle pl-3 pt-3">Plan</h6>
            <a href="" target="_blank" id="restaurantLink">
-            <img src="assets/img/where.jpg" alt="Plan image" class="mapImg" id="restaurant-img">
+            <iframe id="restaurant-img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.9270521105796!2d4.437695215729751!3d50.40519707946908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c227637e52f8cd%3A0xc86e426105b5a0e5!2sE6K%20-%20Square%20des%20Martyrs%201%2C%206000%20Charleroi!5e0!3m2!1sfr!2sbe!4v1600872311903!5m2!1sfr!2sbe" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </a>
         </div>
         <div class="container col border border-light ml-lg-3 mr-1">
