@@ -49,9 +49,10 @@
                 Bonne dégustation ! 
             </p>
         </div>
-        <div class="jumbotron col-12 col-lg-6 border border-light mx-lg-5 pt-3 my-lg-0 my-4">
+        <div class="jumbotron col-12 col-lg-6 border border-light mx-lg-5 pt-0 pr-0 my-lg-0 my-4">
+            <button class="btn btn-primary ml-auto d-block" type="button" id="open-modal-button" data-modal-target="#modalEvent">Dev</button>
             <h2>Évènement</h2>
-            <ol class="p-0 d-flex flex-column justify-content-between event-list">
+            <ol class="p-0 d-flex flex-column justify-content-between event-list" id="eventList">
             <li class="border-bottom">
             <h5>Venez participer à notre fête d'ouverture le 01 octobre !</h5>
             <p>Pour fêter notre ouvertre, nous organisous une fête buffet et boisson à volonté !</p>
@@ -61,10 +62,10 @@
                 <li>Boisson soft et alcool à volonté (à consommer avec modération)</li>
                 <li>Inscription limité dépèchez-vous !</li>
             </ul>
-            <button class="btn btn-primary ml-auto d-block my-3" type="button" id="open-modal-button">Inscrivez-vous !</button>
+            <button class="btn btn-primary ml-auto d-block mr-3 my-3" type="button" id="open-modal-button" data-modal-target="#modal">Inscrivez-vous !</button>
         </li>
         <li class="border-bottom"><h5>À venir : Noël</h5></li>
-        <li><h5>À venir : Nouvel An</h5></li>
+        <li class="border-bottom"><h5>À venir : Nouvel An</h5></li>
         </ol>
         </div>
         <div class="container col border border-light ml-lg-3 mr-1">
@@ -79,11 +80,38 @@
         </div>
     </div>
 </section>
+<div class="subscribeModal col col-md-6" id="modalEvent">
+  <div class="subscribeModal-content w-100">
+    <div class="subscribeModal-header col-12 px-lg-0 col-lg-10 offset-lg-1">
+      <h2>Developer</h2>
+      <button class="justify-content-end" data-close-button data-add-target="#modalEvent" type="button" id="close-modal-button">X</button>
+    </div>
+      <form id="myformEvent" method="post">
+          <div class="row m-0">
+            <div class="col-12 px-lg-0 col-lg-10 form-group offset-lg-1">
+            <select name="addSupr" id="addSupr" onchange="hideAdd()">
+              <option value="0">Ajouter</option>
+              <option value="1">Supprimer</option>
+            </select>
+          </div>
+          <div class="col-12 px-lg-0 col-lg-10 form-group offset-lg-1">
+            <label for="eventTitle">Event title</label>
+              <input required type="text" class="form-control" id="eventTitle" name="eventTitle">
+          </div>
+          <div id="descriptionArea" class="col-12 px-lg-0 col-lg-10 form-group offset-lg-1">
+            <label for="eventDescription">Event description</label>
+            <textarea rows="3" class="form-control" name="eventDescription" id="eventDescription"></textarea>
+          </div>
+      </div>
+          <button type="submit" class="btn btn-primary offset-lg-1" data-close-button data-add-target="#propositionListe">Submit</button>
+        </form>
+  </div>
+</div>
 <div class="subscribeModal col col-md-6" id="modal">
     <div class="subscribeModal-content w-100">
       <div class="subscribeModal-header">
         <h2>Inscription</h2>
-        <button class="justify-content-end" data-close-button type="button" id="close-modal-button">X</button>
+        <button class="justify-content-end" data-close-button type="button" id="close-modal-button" data-add-target="#modal">X</button>
       </div>
         <form id="myform" method="post">
             <div class="row m-0">

@@ -1,35 +1,41 @@
-const openModalButton = document.getElementById("open-modal-button");
+const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const closeModalButtons = document.querySelectorAll("[data-close-button]");
 const overlay = document.getElementById("overlay");
 
-openModalButton.addEventListener("click", () => {
+openModalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = document.querySelector(button.dataset.modalTarget);
     openModal(modal);
   });
-  
-  overlay.addEventListener("click", () => {
-    const modal = document.querySelector(".subscribeModal.active");
+});
+
+overlay.addEventListener("click", () => {
+  const modals = document.querySelectorAll(".subscribeModal.active");
+  modals.forEach((modal) => {
     closeModal(modal);
   });
-  
-  closeModalButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const modal = button.closest(".subscribeModal");
-      closeModal(modal);
-    });
-  });
+});
 
-  function openModal(modal) {
-    if (modal == null) return;
-    console.log("open");
-    modal.classList.add("active");
-    overlay.classList.add("active");
-  }
-  function closeModal(modal) {
-    if (modal == null) return;
-    modal.classList.remove("active");
-    overlay.classList.remove("active");
-  }
-  
+closeModalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = button.closest(".subscribeModal");
+    closeModal(modal);
+  });
+});
+
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add("active");
+  overlay.classList.add("active");
+}
+
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove("active");
+  overlay.classList.remove("active");
+}
+
+
 function restaurantChoice(){
     let restaurant = document.getElementById("restaurant-list").value;
     let adress = document.getElementById("adress");
@@ -50,3 +56,51 @@ function restaurantChoice(){
           break; 
     }
 }
+
+const myFormEvent = document.getElementById("myformEvent");
+const descriptionArea = document.getElementById("descriptionArea");
+
+  const _handleSubmit = async (e) => {
+    e.preventDefault();
+    const eventTitle = document.getElementById("eventTitle").value;
+    const eventDescription = document.getElementById("eventDescription").value;
+    const addSupr = document.getElementById("addSupr").value;
+    console.log("submited");
+
+    const data = {
+      eventTitle,
+      eventDescription,
+      addSupr,
+    };
+    addEvent(data);
+    myFormEvent.reset();
+  };
+
+  function addEvent(data){
+    if(data.addSupr==0)
+    {
+    const newEvent = document.createElement("li");
+    newEvent.classList.add("border-bottom");
+    newEvent.setAttribute("id", data.eventTitle + "li");
+    newEvent.innerHTML = `<h5>${data.eventTitle}</h5>
+    <p>${data.eventDescription}</p></li>`;
+    document.getElementById("eventList").appendChild(newEvent);
+  }else{
+    const supr= document.getElementById(data.eventTitle + "li");
+    supr.innerHTML='';
+    supr.remove();
+    descriptionArea.classList.remove("d-none");
+  }
+
+  }
+
+  function hideAdd(){
+    const hide = document.getElementById("addSupr").value;
+    if(hide==0){
+      descriptionArea.classList.remove("d-none");
+    }else{
+      descriptionArea.classList.add("d-none");
+    }
+  }
+
+ myFormEvent.addEventListener("submit", _handleSubmit);
